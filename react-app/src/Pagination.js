@@ -55,7 +55,7 @@ function UserList() {
       setTimeout(() => {
         window.location.reload(false);
       }, 61000)
-    })
+    }, [])
     
       return (
         <>
