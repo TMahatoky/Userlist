@@ -44,18 +44,21 @@ function UserList() {
     }).then((response) => {
         if(response.data.loggedIn === true){
           setStatus(response.data.user[0].firstname);
+          setTimeout(() => {
+            navigate('/', {replace: true});
+          }, 61000)
         }
-        else if (response.data.loggedIn === false){
-          navigate('/', {replace: true});
-        }
+        // else if (response.data.loggedIn === false){
+        //   navigate('/', {replace: true});
+        // }
       });
     }, [])
 
-    useEffect(() => {
-      setTimeout(() => {
-        window.location.reload(false);
-      }, 61000)
-    }, [])
+    // useEffect(() => {
+    //   setTimeout(() => {
+    //     window.location.reload(false);
+    //   }, 61000)
+    // }, [])
     
       return (
         <>

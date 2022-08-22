@@ -85,7 +85,7 @@ app.get("/", (req, res) => {
         res.send({loggedIn: true, user: req.session.user});
     }
     else {
-        res.send({loggedIn: false});
+        // res.send({loggedIn: false});
         req.session.destroy();
     }
 
