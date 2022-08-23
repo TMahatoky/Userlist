@@ -45,12 +45,12 @@ function UserList() {
         if(response.data.loggedIn === true){
           setStatus(response.data.user[0].firstname);
           setTimeout(() => {
-            navigate('/', {replace: true});
-          }, 61000)
+            window.location.reload(false);
+          }, 61000);
         }
-        // else if (response.data.loggedIn === false){
-        //   navigate('/', {replace: true});
-        // }
+        else if (response.data.loggedIn === false){
+          navigate('/', {replace: true});
+        }
       });
     }, [])
 
